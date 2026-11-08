@@ -20,7 +20,7 @@ int main(void)
    * - do not remove anything from the initial code
    * - don't change anything but the line of code you are adding
    */
-  *(p + 5) = 98; /* السطر المطلوبة إضافته */
+  *(p + 5) = 98;
   printf("a[2] = %d\n", a[2]);
   return (0);
 }
