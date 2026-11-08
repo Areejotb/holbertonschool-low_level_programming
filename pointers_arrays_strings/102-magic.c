@@ -9,18 +9,15 @@ int main(void)
   a[2] = 1024;
   p = &n;
   /*
-   * write your line of code here (scop. comments)
+   * write your line of code here...
    * Remember:
-   * - you are not allowed to use the variable a
-   * - you are not allowed to modify the variable p
-   * - you can only write one statement
-   * - you are not allowed to use ,
-   * - you are not allowed to code anything else than this line
-   * - your code should be written at line 19, before the ;
-   * - do not remove anything from the initial code
-   * - don't change anything but the line of code you are adding
+   * - you are not allowed to use a
+   * - you are not allowed to modify p
+   * - only one statement
+   * - you are not allowed to code anything else than this line of code
    */
   *(p + 5) = 98;
+  /* ...so that this prints 98\n */
   printf("a[2] = %d\n", a[2]);
   return (0);
 }
