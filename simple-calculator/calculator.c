@@ -3,11 +3,11 @@
 /**
  * main - Entry point of the simple calculator
  *
- * Return: 0 on success, 1 on input error
+ * Return: Always 0
  */
 int main(void)
 {
-	int choice;
+	int choice, c, res;
 
 	printf("Simple Calculator\n");
 
@@ -20,8 +20,18 @@ int main(void)
 		printf("0) Quit\n");
 		printf("Choice: ");
 
-		if (scanf("%d", &choice) != 1)
-			return (1);
+		res = scanf("%d", &choice);
+
+		if (res == EOF)
+			break;
+
+		if (res == 0)
+		{
+			while ((c = getchar()) != '\n' && c != EOF)
+				;
+			printf("Invalid choice\n");
+			continue;
+		}
 
 		if (choice == 0)
 		{
@@ -29,7 +39,8 @@ int main(void)
 			break;
 		}
 
-		printf("Not implemented yet\n");
+		if (choice < 1 || choice > 4)
+			printf("Invalid choice\n");
 	}
 
 	return (0);
