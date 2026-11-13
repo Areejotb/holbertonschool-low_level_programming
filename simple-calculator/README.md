@@ -26,3 +26,13 @@ user quit by choosing option 0.
     0) Quit
     Choice: 0
     Bye!
+
+## Number type
+
+The calculator uses decimal numbers (`double`) for all operations.
+Results are printed with `%g`, so whole numbers appear without a
+decimal part (e.g. `35`) and others appear as decimals (e.g. `2.5`).
+
+## Division
+
+Dividing by zero prints `Error: division by zero` instead of a result.
